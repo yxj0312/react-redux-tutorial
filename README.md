@@ -17,3 +17,7 @@ Unfortunately a ton of logic gets stuffed into frontend components these days. I
 Redux can solve exactly those issues. It might not be clear in the beginning, but Redux helps giving each frontend component the exact piece of state it needs.
 
 Even better, Redux can hold business logic inside its own layer (middleware), alongside with the code for fetching data. The benefits of this approach are manifold.
+
+## Redux reducers
+
+What’s a reducer? A Redux reducer is just a JavaScript function. It takes two parameters: the current state and action (more about actions soon).
