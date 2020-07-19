@@ -21,3 +21,25 @@ Even better, Redux can hold business logic inside its own layer (middleware), al
 ## Redux reducers
 
 What’s a reducer? A Redux reducer is just a JavaScript function. It takes two parameters: the current state and action (more about actions soon).
+
+## Redux actions and named constants
+
+### Actions
+
+Redux actions are nothing more than JavaScript objects. This is how an action looks like:
+
+```js
+{
+  type: 'ADD_ARTICLE',
+  payload: { title: 'React Redux Tutorial', id: 1 }
+}
+```
+
+The type property drives how the state should change and it's always required by Redux. The payload property instead describes what should change, and might be omitted if you don't have new data to save in the store.
+
+### Constants
+
+You can notice that the type property is a string. Strings are prone to typos and duplicates and for this reason it's better to declare actions as constants.
+
+You can follow the [Redux duck](https://github.com/erikras/ducks-modular-redux) convention if you want, it keeps every Redux related piece in a single file.
+
