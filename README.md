@@ -43,3 +43,9 @@ You can notice that the type property is a string. Strings are prone to typos an
 
 You can follow the [Redux duck](https://github.com/erikras/ducks-modular-redux) convention if you want, it keeps every Redux related piece in a single file.
 
+### Connecting React with Redux
+
+You will use connect with two or three arguments depending on the use case:
+
+- a mapStateToProps function (you can name it also "select")
+- a mapDispatchToProps function
