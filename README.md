@@ -49,3 +49,6 @@ You will use connect with two or three arguments depending on the use case:
 
 - a mapStateToProps function (you can name it also "select")
 - a mapDispatchToProps function
+
+### Form component and Redux actions
+
