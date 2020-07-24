@@ -52,3 +52,8 @@ You will use connect with two or three arguments depending on the use case:
 
 ### Form component and Redux actions
 
+The class component will help keeping some local state, like form inputs. It receives a Redux action as well. This way it can update the global state by dispatching the addArticle action.
+
+### Redux middleware
+
+A Redux middleware is a function that is able to intercept, and act accordingly, our actions, before they reach the reducer. 
