@@ -57,3 +57,25 @@ The class component will help keeping some local state, like form inputs. It rec
 ### Redux middleware
 
 A Redux middleware is a function that is able to intercept, and act accordingly, our actions, before they reach the reducer. 
+
+#### Benefits from using a Redux middleware
+
+- most of the logic can live outside the UI library
+
+- middleware become reusable pieces of logic, easy to reason about
+
+- middleware can be tested in isolation
+
+### asynchronous actions
+
+Dispatching an action is synchronous.
+
+Suppose we want to fetch data from an API. In React you would put a call in componentDidMount and call it a day. But how about Redux?
+
+ "Error: Actions must be plain objects. Use custom middleware for async actions". We cannot call Fetch from within an action creator in Redux.
+
+That's because Redux is expecting objects as actions, but we're trying to return a Promise.
+
+### Asynchronous actions in Redux with Redux Thunk
+
+With redux-thunk (it's a middleware) we can overcome the problem and return functions from action creators. This way we can call APIs, delay the dispatch of an action, and more.
