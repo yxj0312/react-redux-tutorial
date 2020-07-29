@@ -79,3 +79,13 @@ That's because Redux is expecting objects as actions, but we're trying to return
 ### Asynchronous actions in Redux with Redux Thunk
 
 With redux-thunk (it's a middleware) we can overcome the problem and return functions from action creators. This way we can call APIs, delay the dispatch of an action, and more.
+
+### Redux Saga
+
+redux-thunk makes perfect sense for a lot of project. But in reality asynchronous actions can be trickier to test and organize. For this reason most developers prefer an alternative approach: redux-saga.
+
+#### What is redux-saga
+
+redux-saga is a Redux middleware for managing side effects. With redux-saga you can have a separate thread in your application for dealing with impure actions: API calls, storage access, and more.
+
+redux-saga is different from an async action in terms of both syntax and code organization. With redux-thunk you can put an API call directly inside an action creator while in redux-saga you can have clear separation between synchronous and asynchronous logic.
